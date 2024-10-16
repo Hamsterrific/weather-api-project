@@ -1,5 +1,6 @@
 import loadCities from '../src/parser.js';
 import renderData from '../src/view.js';
+import '../src/css/master.css';
 
 const getCityWeather = async (lat, lon) => {
   try {
