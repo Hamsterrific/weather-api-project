@@ -22,7 +22,7 @@ export default (env) => {
       static: './',
       port: 9000,
       open: true,
-      hot: true
+      hot: true,
     },
     module: {
       rules: [
@@ -35,6 +35,14 @@ export default (env) => {
               presets: ['@babel/preset-env'],
             },
           },
+        },
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
         },
       ],
     },
