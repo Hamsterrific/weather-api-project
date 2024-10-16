@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Weather API project",
-  "main": "index.html",
+  "main": "./dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack serve --open"
+    "build:dev": "webpack --env mode=development",
+    "build:prod": "webpack --env mode=production",
+    "start": "webpack serve --open",
+    "watch": "webpack --watch"
   },
   "author": "Sofia Shcherbakova",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "@babel/core": "^7.25.7",
     "@babel/preset-env": "^7.25.7",
     "babel-loader": "^9.2.1",
+    "html-webpack-plugin": "^5.6.0",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"

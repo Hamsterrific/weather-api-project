@@ -1,5 +1,5 @@
-import weatherIcons from './weather-icons.js';
-import weatherText from './weather-text.js';
+import weatherIcons from '../src/weather-icons.js';
+import weatherText from '../src/weather-text.js';
 
 const selectIconSrc = (weatherType) => {
   return weatherIcons[weatherType];
@@ -31,16 +31,18 @@ const renderWeatherType = (weatherType) => {
   return `Weather: ${weatherText[weatherType]}`;
 }
 
-const renderSelect = (citySelect, temp, weatherType) => {
+const renderSelect = (citySelect, { weather, temp2m, wind10m }) => {
+  const { speed, direction } = wind10m;
   document.querySelector('#cityName').textContent =
     citySelect.options[citySelect.selectedIndex].text;
-  document.querySelector('#temperature').textContent = `Temperature: ${temp}°C`;
+  document.querySelector('#temperature').textContent = `Temperature: ${temp2m}°C`;
+  document.querySelector('#wind').textContent = `Wind: ${speed} ${direction}`;
   document.querySelector(
     '#description'
-  ).textContent = renderWeatherType(weatherType);
+  ).textContent = renderWeatherType(weather);
 };
 
-export default (citySelect, temp, weatherType) => {
-  renderSelect(citySelect, temp, weatherType);
-  renderIcon(weatherType);
+export default (citySelect, weather) => {
+  renderSelect(citySelect, weather);
+  renderIcon(weather.weather);
 };

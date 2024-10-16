@@ -1,7 +1,8 @@
 import Papa from 'papaparse';
 
-export default function loadCities() {
-  fetch('city_coordinates.csv')
+export default function () {;
+  //Emulating fetching coordinates from another place
+  fetch('../city_coordinates.csv')
     .then((response) => response.text())
     .then((csvText) => {
       const cities = Papa.parse(csvText, {
