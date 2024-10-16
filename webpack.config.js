@@ -37,6 +37,10 @@ export default (env) => {
           },
         },
         {
+          test: /\.csv$/,
+          use: 'csv-loader',
+        },
+        {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },

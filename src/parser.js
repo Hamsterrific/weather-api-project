@@ -1,23 +1,15 @@
-import Papa from 'papaparse';
+import cityCoordinates from '../assets/city_coordinates.csv';
 
-export default function () {;
-  //Emulating fetching coordinates from another place
-  fetch('../city_coordinates.csv')
-    .then((response) => response.text())
-    .then((csvText) => {
-      const cities = Papa.parse(csvText, {
-        header: true,
-        dynamicTyping: true,
-        skipEmptyLines: true,
-      }).data;
-
-      const citySelect = document.querySelector('#city');
-      cities.forEach((city) => {
-        const option = document.createElement('option');
-        option.value = `${city.latitude},${city.longitude}`;
-        option.textContent = `${city.city}, ${city.country}`;
-        citySelect.appendChild(option);
-      });
-    })
-    .catch((error) => console.error('Error loading CSV:', error));
-}
+export default () => {
+  const citySelect = document.querySelector('#city');
+  cityCoordinates.slice(1).forEach((city) => {
+    const latitude = city[0];
+    const longitude = city[1];
+    const cityName = city[2];
+    const country = city[3];
+    const option = document.createElement('option');
+    option.value = `${latitude},${longitude}`;
+    option.textContent = `${cityName}, ${country}`;
+    citySelect.appendChild(option);
+  });
+};

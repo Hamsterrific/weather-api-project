@@ -1,27 +1,43 @@
+import clear from '../assets/images/clear.png';
+import cloudy from '../assets/images/cloudy.png';
+import humid from '../assets/images/humid.png';
+import ishower from '../assets/images/ishower.png';
+import lightrain from '../assets/images/lightrain.png';
+import mcloudy from '../assets/images/mcloudy.png';
+import oshower from '../assets/images/oshower.png';
+import pcloudy from '../assets/images/pcloudy.png';
+import rainsnow from '../assets/images/rainsnow.png';
+import snow from '../assets/images/snow.png';
+import rain from '../assets/images/rain.png';
+import tsrain from '../assets/images/tsrain.png';
+import tstorm from '../assets/images/tstorm.png';
+import windy from '../assets/images/windy.png';
+
 export default {
-  clearday: '../src/images/clear.png',
-  clearnight: '../src/images/clear.png',
-  cloudyday: '../src/images/cloudy.png',
-  cloudynight: '../src/images/cloudy.png',
-  humidday: '../src/images/humid.png',
-  humidnight: '../src/images/humid.png',
-  ishowerday: '../src/images/ishower.png',
-  ishowernight: '../src/images/ishower.png',
-  lightrainday: '../src/images/lightrain.png',
-  lightrainnight: '../src/images/lightrain.png',
-  mcloudyday: '../src/images/mcloudy.png',
-  mcloudynight: '../src/images/mcloudy.png',
-  oshowerday: '../src/images/oshower.png',
-  oshowernight: '../src/images/oshower.png',
-  pcloudyday: '../src/images/pcloudy.png',
-  pcloudynight: '../src/images/pcloudy.png',
-  rainsnownight: '../src/images/rainsnow.png',
-  snowday: '../src/images/snow.png',
-  snownight: '../src/images/snow.png',
-  rainday: '../src/images/rain.png',
-  rainnight: '../src/images/rain.png',
-  tsrainday: '../src/images/tsrain.png',
-  tstormday: '../src/images/tstorm.png',
-  tsstormnight: '../src/images/tstorm.png',
-  windy: '../src/images/windy.png',
+  clearday: clear,
+  clearnight: clear,
+  cloudyday: cloudy,
+  cloudyday: cloudy,
+  cloudynight: cloudy,
+  humidday: humid,
+  humidnight: humid,
+  ishowerday: ishower,
+  ishowernight: ishower,
+  lightrainday: lightrain,
+  lightrainnight: lightrain,
+  mcloudyday: mcloudy,
+  mcloudynight: mcloudy,
+  oshowerday: oshower,
+  oshowernight: oshower,
+  pcloudyday: pcloudy,
+  pcloudynight: pcloudy,
+  rainsnownight: rainsnow,
+  snowday: snow,
+  snownight: snow,
+  rainday: rain,
+  rainnight: rain,
+  tsrainday: tsrain,
+  tstormday: tstorm,
+  tsstormnight: tstorm,
+  windy: windy,
 };
